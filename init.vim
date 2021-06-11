@@ -5,7 +5,6 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'folke/tokyonight.nvim'
 call plug#end()
 
-
 let mapleader = ","
 set number
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
