@@ -1,3 +1,6 @@
+" PRE-REQUISITES
+" pip3 install ranger-fm pynvim
+
 call plug#begin('~/.config/nvim/plugged')
 Plug 'kevinhwang91/rnvimr'
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
