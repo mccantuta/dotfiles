@@ -19,6 +19,8 @@ set number
 set mouse=a
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
+" ---------- RNVIMR CONFIG ---------------
+"  https://github.com/kevinhwang91/rnvimr
 " Make Ranger to be hidden after picking a file
 let g:rnvimr_enable_picker = 1
 tnoremap <silent> <leader>r <C-\><C-n>:RnvimrResize<CR>
