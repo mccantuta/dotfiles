@@ -1,5 +1,6 @@
 " PRE-REQUISITES
 " pip3 install ranger-fm pynvim
+" First of all, install vim-plug https://github.com/junegunn/vim-plug
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'kevinhwang91/rnvimr'
