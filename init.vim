@@ -5,8 +5,9 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'kevinhwang91/rnvimr'
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'folke/tokyonight.nvim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Do not forget to install all languages syntax using TSInstall go 
@@ -37,6 +38,7 @@ let g:nvim_tree_highlight_opened_files = 1 "0 by default, will enable folder and
 let g:nvim_tree_tab_open = 1 "0 by default, will open the tree when entering a new tab and the tree was previously open
 let g:nvim_tree_group_empty = 1 " 0 by default, compact folders that only contain a single folder into one node in the file tree
 set termguicolors " this variable must be enabled for colors to be applied properly
+nnoremap <silent> <leader>t :NvimTreeToggle<CR>
 
 " ---------- VIM GO CONFIG --------------
 "  https://hackernoon.com/my-neovim-setup-for-go-7f7b6e805876
@@ -70,19 +72,24 @@ endfunction
 au FileType go nmap <Leader>gd <Plug>(go-def-vertical)
 
 " -------- VIM AIRLINE CONFIG -------------
-"let g:airline_theme='deus'
+let g:airline_theme='deus'
 
 " -------- NVIM TREESITTER CONFIG ---------
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = {"java", "go", "html", "javascript"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  ensure_installed = {"java", "go", "gomod", "html", "javascript", "bash", "c", "comment", "cpp", "css", "dockerfile", "json", "yaml"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   ignore_install = { "rust" }, -- List of parsers to ignore installing
   highlight = {
     enable = true,              -- false will disable the whole extension
-    disable = { "c", "rust" },  -- list of language that will be disabled
+    disable = { "rust" },  -- list of language that will be disabled
   },
 }
 EOF
 
+let g:tokyonight_style = "storm"
+let g:tokyonight_italic_functions = 1
+let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
 
+" Load the colorscheme
 colorscheme tokyonight
+
