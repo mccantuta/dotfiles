@@ -15,13 +15,20 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'  " General fuzzy finder
+" Telescope
+" https://github.com/nvim-telescope/telescope.nvim
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+" NEWS
+Plug 'liuchengxu/vim-which-key'
 call plug#end()
-
 
 let mapleader = ","
 set number
 set mouse=a
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+set autoindent
 
 " ---------- RNVIMR CONFIG ---------------
 "  https://github.com/kevinhwang91/rnvimr
@@ -73,6 +80,12 @@ endfunction
 "au FileType go nmap <Leader>gd <Plug>(go-def-tab)
 "au FileType go nmap <Leader>gs <Plug>(go-def-split)
 au FileType go nmap <Leader>gd <Plug>(go-def-vertical)
+
+"--------- TELESCOPE CONFIG ---------------
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " -------- VIM AIRLINE CONFIG -------------
 let g:airline_theme='deus'
