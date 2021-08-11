@@ -42,7 +42,7 @@ tnoremap <silent> <leader>j <C-\><C-n>:RnvimrToggle<CR>
 "----------- NVIM TREE CONFIG -----------
 " Install NERD fonts -> https://github.com/ryanoasis/nerd-fonts
 let g:nvim_tree_width = 40 "30 by default
-let g:nvim_tree_auto_open = 1 "0 by default, opens the tree when typing `vim $DIR` or `vim`
+let g:nvim_tree_auto_open = 0 "0 by default, opens the tree when typing `vim $DIR` or `vim`
 let g:nvim_tree_quit_on_open = 0 "0 by default, closes the tree when you open a file
 let g:nvim_tree_highlight_opened_files = 1 "0 by default, will enable folder and file icon highlight for opened files/directories.
 let g:nvim_tree_tab_open = 1 "0 by default, will open the tree when entering a new tab and the tree was previously open
@@ -79,7 +79,8 @@ function! Multiple_cursors_after()
 endfunction
 "au FileType go nmap <Leader>gd <Plug>(go-def-tab)
 "au FileType go nmap <Leader>gs <Plug>(go-def-split)
-au FileType go nmap <Leader>gd <Plug>(go-def-vertical)
+au FileType go nmap <Leader>d <Plug>(go-def-vertical)
+au FileType go nmap <Leader>i <Plug>(go-implements)
 
 "--------- TELESCOPE CONFIG ---------------
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
