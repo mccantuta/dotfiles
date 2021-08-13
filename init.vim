@@ -17,6 +17,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'  " General fuzzy finder
 " Telescope
 " https://github.com/nvim-telescope/telescope.nvim
+" PRE-REQUISITES: Install rg. brew install rg
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -29,6 +30,19 @@ set number
 set mouse=a
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set autoindent
+set termguicolors " this variable must be enabled for colors to be applied properly
+
+" Go to tab by number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
 
 " ---------- RNVIMR CONFIG ---------------
 "  https://github.com/kevinhwang91/rnvimr
@@ -47,7 +61,6 @@ let g:nvim_tree_quit_on_open = 0 "0 by default, closes the tree when you open a 
 let g:nvim_tree_highlight_opened_files = 1 "0 by default, will enable folder and file icon highlight for opened files/directories.
 let g:nvim_tree_tab_open = 1 "0 by default, will open the tree when entering a new tab and the tree was previously open
 let g:nvim_tree_group_empty = 1 " 0 by default, compact folders that only contain a single folder into one node in the file tree
-set termguicolors " this variable must be enabled for colors to be applied properly
 nnoremap <silent> <leader>t :NvimTreeToggle<CR>
 
 " ---------- VIM GO CONFIG --------------
@@ -81,12 +94,19 @@ endfunction
 "au FileType go nmap <Leader>gs <Plug>(go-def-split)
 au FileType go nmap <Leader>d <Plug>(go-def-vertical)
 au FileType go nmap <Leader>i <Plug>(go-implements)
+inoremap <C-Space> <C-x><C-o>
 
 "--------- TELESCOPE CONFIG ---------------
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+" ----
+lua <<EOF
+require('telescope').setup { 
+    defaults = { file_ignore_patterns = {"vendor"} } 
+    }
+EOF
 
 " -------- VIM AIRLINE CONFIG -------------
 let g:airline_theme='deus'
