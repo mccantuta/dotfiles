@@ -23,6 +23,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 " NEWS
 Plug 'liuchengxu/vim-which-key'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 let mapleader = ","
