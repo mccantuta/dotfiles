@@ -24,6 +24,8 @@ Plug 'nvim-telescope/telescope.nvim'
 " NEWS
 Plug 'liuchengxu/vim-which-key'
 Plug 'jiangmiao/auto-pairs'
+Plug 'sainnhe/edge'
+Plug 'sainnhe/sonokai'
 call plug#end()
 
 let mapleader = ","
@@ -32,6 +34,11 @@ set mouse=a
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set autoindent
 set termguicolors " this variable must be enabled for colors to be applied properly
+set ignorecase smartcase " search case-insensitively unless uppercase characters are used
+set inccommand=nosplit
+"set nowrap
+" make escape work in terminal
+tnoremap <Esc> <C-\><C-n>
 
 " Go to tab by number
 noremap <leader>1 1gt
@@ -127,7 +134,11 @@ EOF
 let g:tokyonight_style = "storm"
 let g:tokyonight_italic_functions = 1
 let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
-
-" Load the colorscheme
+"Load the colorscheme
 colorscheme tokyonight
+
+let g:edge_style = 'aura'
+let g:edge_enable_italic = 1
+let g:edge_disable_italic_comment = 1
+"colorscheme edge
 
