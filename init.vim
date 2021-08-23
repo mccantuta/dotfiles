@@ -239,4 +239,5 @@ let g:edge_enable_italic = 1
 let g:edge_disable_italic_comment = 1
 "colorscheme edge
 
+let g:nord_uniform_diff_background = 1
 colorscheme nord
