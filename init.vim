@@ -35,6 +35,7 @@ Plug 'hrsh7th/nvim-compe'
 
 " NEWS
 Plug 'jiangmiao/auto-pairs'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
@@ -49,7 +50,7 @@ set termguicolors " this variable must be enabled for colors to be applied prope
 set ignorecase smartcase " search case-insensitively unless uppercase characters are used
 set inccommand=nosplit
 set relativenumber
-"set nowrap
+set nowrap
 " make escape work in terminal
 tnoremap <Esc> <C-\><C-n>
 
@@ -231,10 +232,11 @@ let g:tokyonight_style = "storm"
 let g:tokyonight_italic_functions = 1
 let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
 "Load the colorscheme
-colorscheme tokyonight
+"colorscheme tokyonight
 
 let g:edge_style = 'aura'
 let g:edge_enable_italic = 1
 let g:edge_disable_italic_comment = 1
 "colorscheme edge
 
+colorscheme nord
