@@ -51,6 +51,8 @@ set ignorecase smartcase " search case-insensitively unless uppercase characters
 set inccommand=nosplit
 set relativenumber
 set nowrap
+set splitbelow
+set splitright
 " make escape work in terminal
 tnoremap <Esc> <C-\><C-n>
 
@@ -85,6 +87,7 @@ let g:nvim_tree_quit_on_open = 0 "0 by default, closes the tree when you open a 
 let g:nvim_tree_highlight_opened_files = 1 "0 by default, will enable folder and file icon highlight for opened files/directories.
 let g:nvim_tree_tab_open = 1 "0 by default, will open the tree when entering a new tab and the tree was previously open
 let g:nvim_tree_group_empty = 1 " 0 by default, compact folders that only contain a single folder into one node in the file tree
+let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
 nnoremap <silent> <leader>t :NvimTreeToggle<CR>
 
 
