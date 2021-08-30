@@ -36,6 +36,7 @@ Plug 'hrsh7th/nvim-compe'
 " NEWS
 Plug 'jiangmiao/auto-pairs'
 Plug 'arcticicestudio/nord-vim'
+Plug 'mfussenegger/nvim-jdtls'
 
 call plug#end()
 
@@ -228,6 +229,16 @@ inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+
+"--------------------------------------------- JAVA LSP JDTLS ---------------------------------------------------
+" ---------------------------------------------------------------------------------------------------------------
+if has('nvim-0.5')
+  augroup lsp
+    au!
+    au FileType java lua require('jdtls').start_or_attach({cmd = {'nvim-java-lsp.sh'}})
+  augroup end
+endif
+nnoremap <leader>ca <Cmd>lua require('jdtls').code_action()<CR>
 
 
 "-------------------------------------------------- THEMES ------------------------------------------------------
