@@ -54,6 +54,7 @@ set relativenumber
 set nowrap
 set splitbelow
 set splitright
+set clipboard=unnamedplus
 " make escape work in terminal
 tnoremap <Esc> <C-\><C-n>
 
