@@ -37,6 +37,7 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'jiangmiao/auto-pairs'
 Plug 'arcticicestudio/nord-vim'
 Plug 'mfussenegger/nvim-jdtls'
+Plug 'romgrk/barbar.nvim'
 
 call plug#end()
 
@@ -58,17 +59,25 @@ set clipboard=unnamedplus
 " make escape work in terminal
 tnoremap <Esc> <C-\><C-n>
 
-" Go to tab by number
-noremap <leader>1 1gt
-noremap <leader>2 2gt
-noremap <leader>3 3gt
-noremap <leader>4 4gt
-noremap <leader>5 5gt
-noremap <leader>6 6gt
-noremap <leader>7 7gt
-noremap <leader>8 8gt
-noremap <leader>9 9gt
-noremap <leader>0 :tablast<cr>
+"------------------------------------------ BARBAR CONFIG -----------------------------------------------------
+" ---------------------------------------------------------------------------------------------------------------
+" Goto buffer in position...
+noremap <leader>1 :BufferGoto 1<CR>
+noremap <leader>2 :BufferGoto 2<CR>
+noremap <leader>3 :BufferGoto 3<CR>
+noremap <leader>4 :BufferGoto 4<CR>
+noremap <leader>5 :BufferGoto 5<CR>
+noremap <leader>6 :BufferGoto 6<CR>
+noremap <leader>7 :BufferGoto 7<CR>
+noremap <leader>8 :BufferGoto 8<CR>
+noremap <leader>9 :BufferGoto 9<CR>
+noremap <leader>0 :BufferLast<CR>
+" Move to previous/next
+nnoremap <leader>, :BufferPrevious<CR>
+nnoremap <leader>. :BufferNext<CR>
+" Re-order to previous/next
+noremap <leader>< :BufferMovePrevious<CR>
+noremap <leader>> :BufferMoveNext<CR>
 
 "------------------------------------------ GRNVIMR CONFIG -----------------------------------------------------
 " ---------------------------------------------------------------------------------------------------------------
