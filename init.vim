@@ -22,22 +22,20 @@ Plug 'junegunn/fzf.vim'  " General fuzzy finder
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-
-" THEMES
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'sainnhe/edge'
-
-" AUTOCOMPLETE
+" AutoComplete
 Plug 'hrsh7th/vim-vsnip'
 "Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
-
-" NEWS
 Plug 'jiangmiao/auto-pairs'
-Plug 'arcticicestudio/nord-vim'
+" Java
 Plug 'mfussenegger/nvim-jdtls'
-Plug 'romgrk/barbar.nvim'
+" THEMES
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'sainnhe/edge'
+Plug 'arcticicestudio/nord-vim'
+" Miscellaneous
+Plug 'webdevel/tabulous'
 
 call plug#end()
 
@@ -59,25 +57,21 @@ set clipboard=unnamedplus
 " make escape work in terminal
 tnoremap <Esc> <C-\><C-n>
 
-"------------------------------------------ BARBAR CONFIG -----------------------------------------------------
+" Go to tab by number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+
+"------------------------------------------ TABULOUS CONFIG -----------------------------------------------------
 " ---------------------------------------------------------------------------------------------------------------
-" Goto buffer in position...
-noremap <leader>1 :BufferGoto 1<CR>
-noremap <leader>2 :BufferGoto 2<CR>
-noremap <leader>3 :BufferGoto 3<CR>
-noremap <leader>4 :BufferGoto 4<CR>
-noremap <leader>5 :BufferGoto 5<CR>
-noremap <leader>6 :BufferGoto 6<CR>
-noremap <leader>7 :BufferGoto 7<CR>
-noremap <leader>8 :BufferGoto 8<CR>
-noremap <leader>9 :BufferGoto 9<CR>
-noremap <leader>0 :BufferLast<CR>
-" Move to previous/next
-nnoremap <leader>, :BufferPrevious<CR>
-nnoremap <leader>. :BufferNext<CR>
-" Re-order to previous/next
-noremap <leader>< :BufferMovePrevious<CR>
-noremap <leader>> :BufferMoveNext<CR>
+map <silent> <leader>ren :call g:tabulous#renameTab()<cr>
 
 "------------------------------------------ GRNVIMR CONFIG -----------------------------------------------------
 " ---------------------------------------------------------------------------------------------------------------
@@ -88,7 +82,6 @@ tnoremap <silent> <leader>r <C-\><C-n>:RnvimrResize<CR>
 nnoremap <silent> <leader>f :RnvimrToggle<CR>
 tnoremap <silent> <leader>j <C-\><C-n>:RnvimrToggle<CR>
 
-
 "----------------------------------------- NVIM TREE CONFIG ----------------------------------------------------
 " ---------------------------------------------------------------------------------------------------------------
 " Install NERD fonts -> https://github.com/ryanoasis/nerd-fonts
@@ -96,11 +89,10 @@ let g:nvim_tree_width = 40 "30 by default
 let g:nvim_tree_auto_open = 0 "0 by default, opens the tree when typing `vim $DIR` or `vim`
 let g:nvim_tree_quit_on_open = 0 "0 by default, closes the tree when you open a file
 let g:nvim_tree_highlight_opened_files = 1 "0 by default, will enable folder and file icon highlight for opened files/directories.
-let g:nvim_tree_tab_open = 1 "0 by default, will open the tree when entering a new tab and the tree was previously open
+let g:nvim_tree_tab_open = 0 "0 by default, will open the tree when entering a new tab and the tree was previously open
 let g:nvim_tree_group_empty = 1 " 0 by default, compact folders that only contain a single folder into one node in the file tree
 let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
 nnoremap <silent> <leader>t :NvimTreeToggle<CR>
-
 
 "------------------------------------------ VIM GO CONFIG -----------------------------------------------------
 " ---------------------------------------------------------------------------------------------------------------
