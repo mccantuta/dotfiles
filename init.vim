@@ -34,8 +34,12 @@ Plug 'mfussenegger/nvim-jdtls'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'sainnhe/edge'
 Plug 'arcticicestudio/nord-vim'
+Plug 'haishanh/night-owl.vim'
 " Miscellaneous
 Plug 'webdevel/tabulous'
+Plug 'mhinz/vim-startify'
+Plug 'dominikduda/vim_current_word'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 call plug#end()
 
@@ -54,6 +58,8 @@ set nowrap
 set splitbelow
 set splitright
 set clipboard=unnamedplus
+set background=dark
+set t_ut=
 " make escape work in terminal
 tnoremap <Esc> <C-\><C-n>
 
@@ -230,7 +236,7 @@ let g:compe.source.vsnip = v:true
 let g:compe.source.ultisnips = v:true
 let g:compe.source.luasnip = v:true
 
-"au FileType html,js inoremap <silent><expr> <C-Space> compe#complete()
+au FileType html,js inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
@@ -247,14 +253,24 @@ if has('nvim-0.5')
 endif
 nnoremap <leader>ca <Cmd>lua require('jdtls').code_action()<CR>
 
+"-------------------------------------------------- INDENT ------------------------------------------------------
+" ---------------------------------------------------------------------------------------------------------------
+lua <<EOF
+vim.opt.list = true
+require("indent_blankline").setup {
+    --show_current_context = true,
+    --show_current_context_start = true,
+}
+EOF
 
 "-------------------------------------------------- THEMES ------------------------------------------------------
 " ---------------------------------------------------------------------------------------------------------------
-let g:tokyonight_style = "storm"
+let g:tokyonight_style = "night" "Options: storm, night, day
 let g:tokyonight_italic_functions = 1
+let g:tokyonight_dark_float=1
 let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
 "Load the colorscheme
-"colorscheme tokyonight
+colorscheme tokyonight
 
 let g:edge_style = 'aura'
 let g:edge_enable_italic = 1
@@ -262,4 +278,8 @@ let g:edge_disable_italic_comment = 1
 "colorscheme edge
 
 let g:nord_uniform_diff_background = 1
-colorscheme nord
+"colorscheme nord
+
+" To enable the lightline theme
+let g:lightline = { 'colorscheme': 'nightowl' }
+"colorscheme night-owl
