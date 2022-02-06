@@ -269,6 +269,8 @@ let g:tokyonight_style = "night" "Options: storm, night, day
 let g:tokyonight_italic_functions = 1
 let g:tokyonight_dark_float=1
 let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+let g:tokyonight_transparent = "true"
+let g:tokyonight_transparent_sidebar = "true"
 "Load the colorscheme
 colorscheme tokyonight
 
