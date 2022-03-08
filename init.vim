@@ -270,6 +270,7 @@ EOF
 lua <<EOF
 require("toggleterm").setup{
   open_mapping = [[<c-\>]],
+  direction = 'float',
 }
 EOF
 
