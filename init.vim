@@ -35,6 +35,7 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'sainnhe/edge'
 Plug 'arcticicestudio/nord-vim'
 Plug 'haishanh/night-owl.vim'
+Plug 'rebelot/kanagawa.nvim'
 " Miscellaneous
 Plug 'webdevel/tabulous'
 Plug 'mhinz/vim-startify'
@@ -54,7 +55,7 @@ set autoindent
 set termguicolors " this variable must be enabled for colors to be applied properly
 set ignorecase smartcase " search case-insensitively unless uppercase characters are used
 set inccommand=nosplit
-set relativenumber
+"set relativenumber
 set nowrap
 set splitbelow
 set splitright
@@ -295,3 +296,5 @@ let g:nord_uniform_diff_background = 1
 " To enable the lightline theme
 let g:lightline = { 'colorscheme': 'nightowl' }
 "colorscheme night-owl
+
+"colorscheme kanagawa
