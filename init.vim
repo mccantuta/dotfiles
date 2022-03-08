@@ -40,6 +40,7 @@ Plug 'webdevel/tabulous'
 Plug 'mhinz/vim-startify'
 Plug 'dominikduda/vim_current_word'
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'akinsho/toggleterm.nvim'
 
 call plug#end()
 
@@ -263,14 +264,23 @@ require("indent_blankline").setup {
 }
 EOF
 
+"--------------------------------------------- TOGGLE TERM ------------------------------------------------------
+" ---------------------------------------------------------------------------------------------------------------
+lua <<EOF
+require("toggleterm").setup{
+  open_mapping = [[<c-\>]],
+}
+EOF
+
+
 "-------------------------------------------------- THEMES ------------------------------------------------------
 " ---------------------------------------------------------------------------------------------------------------
 let g:tokyonight_style = "night" "Options: storm, night, day
 let g:tokyonight_italic_functions = 1
 let g:tokyonight_dark_float=1
 let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
-let g:tokyonight_transparent = "true"
-let g:tokyonight_transparent_sidebar = "true"
+"let g:tokyonight_transparent = "true"
+"let g:tokyonight_transparent_sidebar = "true"
 "Load the colorscheme
 colorscheme tokyonight
 
