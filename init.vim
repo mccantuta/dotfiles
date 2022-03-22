@@ -36,6 +36,7 @@ Plug 'sainnhe/edge'
 Plug 'arcticicestudio/nord-vim'
 Plug 'haishanh/night-owl.vim'
 Plug 'rebelot/kanagawa.nvim'
+Plug 'EdenEast/nightfox.nvim'
 " Miscellaneous
 Plug 'webdevel/tabulous'
 Plug 'mhinz/vim-startify'
@@ -270,7 +271,7 @@ EOF
 lua <<EOF
 require("toggleterm").setup{
   open_mapping = [[<c-\>]],
-  direction = 'float',
+  direction = 'tab',
 }
 EOF
 
@@ -299,3 +300,5 @@ let g:lightline = { 'colorscheme': 'nightowl' }
 "colorscheme night-owl
 
 "colorscheme kanagawa
+
+"colorscheme Duskfox
