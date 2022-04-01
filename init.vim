@@ -37,9 +37,10 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'haishanh/night-owl.vim'
 Plug 'rebelot/kanagawa.nvim'
 Plug 'EdenEast/nightfox.nvim'
+Plug 'morhetz/gruvbox'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 " Miscellaneous
 Plug 'webdevel/tabulous'
-Plug 'mhinz/vim-startify'
 Plug 'dominikduda/vim_current_word'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'akinsho/toggleterm.nvim'
@@ -63,6 +64,7 @@ set splitright
 set clipboard=unnamedplus
 set background=dark
 set t_ut=
+set colorcolumn=100
 " make escape work in terminal
 tnoremap <Esc> <C-\><C-n>
 
@@ -271,7 +273,7 @@ EOF
 lua <<EOF
 require("toggleterm").setup{
   open_mapping = [[<c-\>]],
-  direction = 'tab',
+  direction = 'horizontal', --'vertical' | 'horizontal' | 'window' | 'float', 
 }
 EOF
 
@@ -285,7 +287,7 @@ let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
 "let g:tokyonight_transparent = "true"
 "let g:tokyonight_transparent_sidebar = "true"
 "Load the colorscheme
-colorscheme tokyonight
+"colorscheme tokyonight
 
 let g:edge_style = 'aura'
 let g:edge_enable_italic = 1
@@ -301,4 +303,10 @@ let g:lightline = { 'colorscheme': 'nightowl' }
 
 "colorscheme kanagawa
 
-"colorscheme Duskfox
+colorscheme Duskfox "Nightfox,Dayfox,Dawnfox,Duskfox,Nordfox,Terafox
+
+"set background=dark "dark,light
+"colorscheme gruvbox
+
+"colorscheme onehalflight "onehalflight onehalfdark
+
