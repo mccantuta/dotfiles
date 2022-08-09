@@ -1,5 +1,5 @@
-" --------------------------------------------- PLUGINS ---------------------------------------------------------
-" ---------------------------------------------------------------------------------------------------------------
+" -------------------------------------- PLUGINS --------------------------------------------------
+" -------------------------------------------------------------------------------------------------
 " PRE-REQUISITES
 " pip3 install ranger-fm pynvim
 " First of all, install vim-plug https://github.com/junegunn/vim-plug
@@ -39,6 +39,8 @@ Plug 'rebelot/kanagawa.nvim'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'morhetz/gruvbox'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
 " Miscellaneous
 Plug 'webdevel/tabulous'
 Plug 'dominikduda/vim_current_word'
@@ -303,10 +305,11 @@ let g:lightline = { 'colorscheme': 'nightowl' }
 
 "colorscheme kanagawa
 
-colorscheme Duskfox "Nightfox,Dayfox,Dawnfox,Duskfox,Nordfox,Terafox
+"colorscheme Duskfox "Nightfox,Dayfox,Dawnfox,Duskfox,Nordfox,Terafox
 
 "set background=dark "dark,light
 "colorscheme gruvbox
 
 "colorscheme onehalflight "onehalflight onehalfdark
-
+"colorscheme nightfly
+colorscheme onenord
