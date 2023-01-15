@@ -1,3 +1,6 @@
+echo Installing software
+echo -------------------
+
 echo Installing NodeJS
 echo -----------------
 #brew install node
@@ -14,8 +17,15 @@ echo Installing Oh My Zsh
 echo --------------------
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+echo Setting configuration
+echo ---------------------
+
 echo Copying Kitty configuration
 echo ---------------------------
+# TODO
+
+echo Copying OhMyZsh configuration
+echo -----------------------------
 # TODO
 
 echo Copying NeoVim configuration
