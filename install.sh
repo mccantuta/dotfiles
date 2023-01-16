@@ -1,5 +1,5 @@
 echo Installing software
-echo -------------------
+echo *******************
 
 echo Installing NodeJS
 echo -----------------
@@ -17,8 +17,12 @@ echo Installing Oh My Zsh
 echo --------------------
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+echo Installing Image Magick
+echo -----------------------
+#brew install imagemagick
+
 echo Setting configuration
-echo ---------------------
+echo *********************
 
 echo Copying Kitty configuration
 echo ---------------------------
