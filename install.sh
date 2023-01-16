@@ -9,10 +9,6 @@ echo Installing Inconsolata Font
 echo ---------------------
 #brew install font-inconsolata
 
-echo Installing NeoVim
-echo -----------------
-#brew install nvim
-
 echo Installing Oh My Zsh
 echo --------------------
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -21,12 +17,16 @@ echo Installing Image Magick
 echo -----------------------
 #brew install imagemagick
 
+echo Installing NeoVim
+echo -----------------
+#brew install nvim
+
 echo Setting configuration
 echo *********************
 
 echo Copying Kitty configuration
 echo ---------------------------
-# TODO
+cp kitty/* ~/.config/kitty/
 
 echo Copying OhMyZsh configuration
 echo -----------------------------
