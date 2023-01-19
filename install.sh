@@ -26,7 +26,7 @@ echo *********************
 
 echo Copying Kitty configuration
 echo ---------------------------
-cp kitty/* ~/.config/kitty/
+#cp kitty/* ~/.config/kitty/
 
 echo Copying OhMyZsh configuration
 echo -----------------------------
@@ -35,4 +35,4 @@ echo -----------------------------
 echo Copying NeoVim configuration
 echo ----------------------------
 #mkdir ~/.config/nvim
-#cp init.lua ~/.config/nvim/
+#cp neovim/init.lua ~/.config/nvim/
