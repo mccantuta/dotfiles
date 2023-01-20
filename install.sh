@@ -1,9 +1,13 @@
 echo Installing software
 echo *******************
 
-echo Installing NodeJS
+echo Installing terminal dependencies
 echo -----------------
+#brew install imagemagick
 #brew install node
+#brew install luarocks
+#brew install cmake
+#brew install rg
 
 echo Installing Inconsolata Font
 echo ---------------------
@@ -12,10 +16,6 @@ echo ---------------------
 echo Installing Oh My Zsh
 echo --------------------
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-echo Installing Image Magick
-echo -----------------------
-#brew install imagemagick
 
 echo Installing NeoVim
 echo -----------------
