@@ -1,6 +1,8 @@
 -- [[ Setting options ]]
 -- See `:help vim.o`
 
+-- Copy yank to clipboard
+vim.opt.clipboard = 'unnamedplus'
 -- Set highlight on search
 vim.o.hlsearch = false
 
@@ -26,4 +28,16 @@ vim.wo.signcolumn = 'yes'
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
+
+-- [[ Highlight on yank ]]
+-- See `:help vim.highlight.on_yank()`
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
+
 

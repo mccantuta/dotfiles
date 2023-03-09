@@ -2,7 +2,7 @@
 Configuration files
 
 ## Tools
-* iTerm2:
+* iTerm2: # DEPRECATED
   * Themes:
     * Blazer
     * Challenger deep
@@ -18,6 +18,8 @@ Configuration files
     * Rapture
     * Relaxed
 
+* Kitty terminal
 * OhMyZsh
 * Powerline
 * Neovim
+* Btop
