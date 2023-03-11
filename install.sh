@@ -11,6 +11,7 @@ brew install rg
 
 echo Installing Inconsolata Font
 echo ---------------------
+brew tap homebrew/cask-fonts
 brew install font-inconsolata
 
 echo Installing Oh My Zsh
@@ -30,7 +31,8 @@ echo *********************
 
 echo Copying Kitty configuration
 echo ---------------------------
-cp kitty/* ~/.config/kitty/
+mkdir -p ~/.config/kitty
+cp -r kitty/* ~/.config/kitty/
 
 echo Copying OhMyZsh configuration
 echo -----------------------------
@@ -39,4 +41,4 @@ cp ohmyzsh/.zshrc ~/
 echo Copying NeoVim configuration
 echo ----------------------------
 mkdir ~/.config/nvim
-cp neovim/* ~/.config/nvim/
+cp -r neovim/* ~/.config/nvim/
