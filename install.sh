@@ -1,6 +1,10 @@
 echo Installing software
 echo *******************
 
+echo Installing Homebrew
+echo -------------------
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 echo Installing terminal dependencies
 echo -----------------
 brew install imagemagick
