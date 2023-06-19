@@ -17,6 +17,7 @@ echo Installing Inconsolata Font
 echo ---------------------
 brew tap homebrew/cask-fonts
 brew install font-inconsolata
+brew install font-inconsolata-nerd-font
 
 echo Installing Oh My Zsh
 echo --------------------
