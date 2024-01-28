@@ -19,6 +19,10 @@ brew tap homebrew/cask-fonts
 brew install font-inconsolata
 brew install font-inconsolata-nerd-font
 
+echo Installing Monaspice Font
+echo ---------------------
+brew install font-monaspace-nerd-font
+
 echo Installing Oh My Zsh
 echo --------------------
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -38,6 +42,13 @@ echo Copying Kitty configuration
 echo ---------------------------
 mkdir -p ~/.config/kitty
 cp -r kitty/* ~/.config/kitty/
+
+echo Copying Wezterm configuration
+echo ---------------------------
+mkdir -p ~/.config/wezterm
+cp wezterm/.wezterm.lua ~/
+cp -r wezterm/mccantuta/ ~/.config/wezterm/
+
 
 echo Copying OhMyZsh configuration
 echo -----------------------------
