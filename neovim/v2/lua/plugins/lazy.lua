@@ -12,9 +12,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Fixes Notify opacity issues
---vim.o.termguicolors = true
-
 require('lazy').setup({
   'onsails/lspkind.nvim',
   {
@@ -115,7 +112,7 @@ require('lazy').setup({
   'lewis6991/gitsigns.nvim',
 
   'nvim-lualine/lualine.nvim', -- Fancier statusline
-  'lukas-reineke/indent-blankline.nvim', -- Add indentation guides even on blank lines
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }, -- Add indentation guides even on blank lines
   'numToStr/Comment.nvim', -- "gc" to comment visual regions/lines 
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
@@ -125,4 +122,13 @@ require('lazy').setup({
  
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make', cond = vim.fn.executable 'make' == 1 },
+
+  -- THEMES   
+  'navarasu/onedark.nvim', -- Theme inspired by Atom
+  'folke/tokyonight.nvim',
+  { "catppuccin/nvim", as = "catppuccin" },
+  "rebelot/kanagawa.nvim",
+  'shaunsingh/nord.nvim',
+  'morhetz/gruvbox'
+ 
 })
