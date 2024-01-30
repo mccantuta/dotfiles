@@ -27,3 +27,7 @@ vim.keymap.set("n", "<leader>ee", "<cmd>GoIfErr<cr>",
 -- Git
 --vim.api.nvim_set_keymap("n", "<leader>gc", ":Git commit -m \"", {noremap=false})
 --vim.api.nvim_set_keymap("n", "<leader>gp", ":Git push -u origin HEAD<CR>", {noremap=false})
+
+-- Zoom buffer
+vim.api.nvim_set_keymap("n", "<leader>zz", ":tabnew %<CR>", {noremap=true})
+
