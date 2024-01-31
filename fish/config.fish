@@ -3,3 +3,5 @@ if status is-interactive
 end
 
 alias l 'ls -la'
+
+starship init fish | source
