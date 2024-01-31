@@ -1,3 +1,4 @@
+#!/bin/bash
 echo Installing software
 echo *******************
 
@@ -22,6 +23,13 @@ brew install font-inconsolata-nerd-font
 echo Installing Monaspice Font
 echo ---------------------
 brew install font-monaspace-nerd-font
+
+echo Installing Fish Shell
+echo ---------------------
+brew install fish
+which fish
+sudo sh -c 'echo /usr/local/bin/fish >> /etc/shells'
+chsh -s /usr/local/bin/fish
 
 echo Installing Oh My Zsh
 echo --------------------
