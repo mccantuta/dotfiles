@@ -28,6 +28,7 @@ vim.wo.signcolumn = 'yes'
 -- Set colorscheme
 --vim.cmd [[colorscheme onedark]]
 --vim.cmd.colorscheme "catppuccin"
+vim.o.background = "dark"
 
 --vim.cmd()
 vim.opt.clipboard = 'unnamedplus'

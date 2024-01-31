@@ -9,7 +9,7 @@ function module.apply_theme(config)
 --config.color_scheme = 'Azu (Gogh)'
 --config.color_scheme = 'Blazer'
 --config.color_scheme = 'Cai (Gogh)'
---config.color_scheme = 'Catppuccin Mocha' -- FAVORITE
+config.color_scheme = 'Catppuccin Mocha' -- FAVORITE
 --config.color_scheme = 'ChallengerDeep'
 --config.color_scheme = 'Cobalt 2 (Gogh)'
 --config.color_scheme = 'Cobalt Neon'
@@ -66,7 +66,7 @@ function module.apply_theme(config)
 --config.color_scheme = 'shades-of-purple'
 --config.color_scheme = 'SpaceGray'
 --config.color_scheme = 'terafox'
-config.color_scheme = 'Tokyo Night' -- FAVORITE 1
+--config.color_scheme = 'Tokyo Night' -- FAVORITE 1
 --config.color_scheme = 'Tokyo Night Moon'
 --config.color_scheme = 'Tokyo Night Storm'
 --config.color_scheme = 'tokyonight'

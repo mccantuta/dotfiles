@@ -33,8 +33,10 @@ require('lazy').setup({
       require("nvim-tree").setup {}
     end,
   },
-  'xiyaowong/nvim-transparent',
-  { 
+
+  --'xiyaowong/nvim-transparent',
+
+  {
     'numToStr/FTerm.nvim',
     config = function()
     local map = vim.api.nvim_set_keymap
@@ -185,8 +187,9 @@ require('lazy').setup({
   -- THEMES   
   'navarasu/onedark.nvim', -- Theme inspired by Atom
   'folke/tokyonight.nvim',
-  { "catppuccin/nvim", as = "catppuccin" },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   "rebelot/kanagawa.nvim",
   'shaunsingh/nord.nvim',
-  'sainnhe/gruvbox-material'
+  'sainnhe/gruvbox-material',
+  { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
 })
