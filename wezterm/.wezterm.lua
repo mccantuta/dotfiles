@@ -4,6 +4,7 @@ local act = wezterm.action
 local theme = require 'mccantuta/theme'
 local font = require 'mccantuta/font'
 local tabs = require 'mccantuta/tabs'
+local window = require 'mccantuta/window'
 -- This table will hold the configuration.
 local config = {}
 
@@ -15,27 +16,10 @@ end
 
 -- This is where you actually apply your config choices
 
-theme.apply_theme(config) 
+theme.apply_theme(config)
 font.apply_font(config, wezterm)
 tabs.apply_config(config, wezterm, act)
-
-config.window_padding = {
-  left = 0,
-  right = 0,
-  top = 0,
-  bottom = 0,
-}
-
-config.window_frame = {
-  border_left_width = 0,
-  border_right_width = 0,
-  border_bottom_height = 0,
-  border_top_height = 0,
-  border_left_color = 'purple',
-  border_right_color = 'purple',
-  border_bottom_color = 'purple',
-  border_top_color = 'purple',
-}
+window.apply_window_format(config)
 
 -- and finally, return the configuration to wezterm
 return config

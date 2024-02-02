@@ -197,4 +197,5 @@ require('lazy').setup({
   'AlexvZyl/nordic.nvim',
   'sainnhe/everforest',
   'Softmotions/vim-dark-frost-theme',
+  'lewpoly/sherbet.nvim',
 })
