@@ -47,6 +47,7 @@ config.color_scheme = 'Catppuccin Mocha' -- FAVORITE
 --config.color_scheme = 'Mirage' --FAVORITE
 --config.color_scheme = 'N0tch2k'
 --config.color_scheme = 'Nature Suede (terminal.sexy)'
+--config.color_scheme = 'neobones_dark'
 --config.color_scheme = 'Neutron'
 --config.color_scheme = 'Night Owl (Gogh)' -- FAVORITE
 --config.color_scheme = 'nordfox'

@@ -192,4 +192,9 @@ require('lazy').setup({
   'shaunsingh/nord.nvim',
   'sainnhe/gruvbox-material',
   { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
+  'oxfist/night-owl.nvim',
+  'xero/miasma.nvim',
+  'AlexvZyl/nordic.nvim',
+  'sainnhe/everforest',
+  'Softmotions/vim-dark-frost-theme',
 })
