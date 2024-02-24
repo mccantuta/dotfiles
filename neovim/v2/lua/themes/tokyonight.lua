@@ -1,5 +1,5 @@
 require("tokyonight").setup({
-  style = "storm", --The theme comes in three styles, `storm`, `moon`, a darker variant `night`
+  style = "night", --The theme comes in three styles, `storm`, `moon`, a darker variant `night`
   transparent = false
 })
 
