@@ -199,4 +199,5 @@ require('lazy').setup({
   'Softmotions/vim-dark-frost-theme',
   'lewpoly/sherbet.nvim',
   'tiagovla/tokyodark.nvim',
+  { "rose-pine/neovim", name = "rose-pine" }
 })
