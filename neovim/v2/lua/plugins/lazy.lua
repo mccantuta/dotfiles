@@ -183,6 +183,8 @@ require('lazy').setup({
 
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make', cond = vim.fn.executable 'make' == 1 },
+  
+  { "nvim-neotest/nvim-nio" },
 
   -- THEMES   
   'navarasu/onedark.nvim', -- Theme inspired by Atom
@@ -203,4 +205,6 @@ require('lazy').setup({
   { 'projekt0n/github-nvim-theme' },
   'fenetikm/falcon',
   'mhartington/oceanic-next',
+  'marko-cerovac/material.nvim',
+  {'nyoom-engineering/oxocarbon.nvim'},
 })

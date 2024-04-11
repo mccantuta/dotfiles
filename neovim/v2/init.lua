@@ -16,6 +16,6 @@ require('plugins.lsp')
 require('plugins.trouble')
 
 -- Set colorscheme
-require("themes.falcon")
+require("themes.rose-pine")
 
 --vim: ts=4 sts=2 sw=2 et
