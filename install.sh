@@ -25,6 +25,10 @@ echo Installing Monaspice Font
 echo ---------------------
 brew install font-monaspace-nerd-font
 
+echo Installing Meslo LG Font
+echo ---------------------
+brew install font-meslo-lg-nerd-font
+
 echo Installing Fish Shell
 echo ---------------------
 brew install fish
@@ -43,6 +47,10 @@ brew install nvim
 echo Installing Kitty terminal
 echo -------------------------
 brew install --cask kitty
+
+echo Installing Alacritty terminal
+echo -------------------------
+brew install alacritty
 
 echo Setting configuration
 echo *********************
