@@ -52,6 +52,11 @@ echo Installing Alacritty terminal
 echo -------------------------
 brew install alacritty
 
+echo Installing Github CLI
+echo -------------------------
+brew install gh
+gh auth login
+
 echo Setting configuration
 echo *********************
 
