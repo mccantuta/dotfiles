@@ -57,7 +57,7 @@ require('mason').setup()
 
 -- Enable the following language servers
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'gopls', 'angularls', 'html', 'lua_ls' }
+local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'gopls', 'angularls', 'html', 'lua_ls', 'jdtls', 'jsonls' }
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
@@ -166,3 +166,6 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
+require'lspconfig'.jdtls.setup{ cmd = { 'jdtls' } }
+
+require'lspconfig'.jsonls.setup{}
