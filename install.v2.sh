@@ -50,6 +50,11 @@ brew install alacritty
 echo Setting configuration
 echo *********************
 
+echo NeoVim - MarkdownPreview dependencies
+echo *************************************
+cd .local/share/nvim/lazy/markdown-preview.nvim
+npm install
+
 echo Copying NeoVim configuration
 echo ----------------------------
 mkdir ~/.config/nvim
