@@ -1,3 +1,6 @@
+# README
+# Copy configuration file to ~/.config/
+
 format = """
 $username\
 $hostname\

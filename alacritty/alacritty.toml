@@ -1,3 +1,6 @@
+# README
+# Copy configuration file to ~/.config/alacritty/
+
 import = [
     #"~/.config/alacritty/themes/themes/ashes_dark.toml"
     #"~/.config/alacritty/themes/themes/aura.toml"
@@ -56,4 +59,4 @@ normal.family = "JetBrainsMono Nerd Font Mono"
 #normal.family = "JuliaMono"
 #normal.family = "FiraMono Nerd Font Mono"
 
-size = 20
+size = 18
