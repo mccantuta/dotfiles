@@ -14,6 +14,7 @@ brew install node
 brew install luarocks
 brew install cmake
 brew install rg
+brew install fzf 
 
 echo Installing Inconsolata Font
 echo ---------------------
