@@ -1,0 +1,5 @@
+font-family = "JetBrainsMono Nerd Font Mono"
+font-size = "20"
+theme = "tokyonight"
+macos-titlebar-style = hidden
+
