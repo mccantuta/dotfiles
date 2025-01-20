@@ -1,5 +1,5 @@
+#theme = tokyonight
+theme = GruvboxDarkHard
 font-family = "JetBrainsMono Nerd Font Mono"
-font-size = "20"
-theme = "tokyonight"
+font-size = 20
 macos-titlebar-style = hidden
-
