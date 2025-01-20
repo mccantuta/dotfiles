@@ -26,8 +26,6 @@ vim.o.updatetime = 250
 vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
---vim.cmd [[colorscheme onedark]]
---vim.cmd.colorscheme "catppuccin"
 vim.o.background = "dark"
 
 --vim.cmd()
@@ -46,7 +44,8 @@ vim.o.conceallevel=2
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-vim.opt.wrap = false
+vim.opt.wrap = true
+vim.opt.linebreak = true
 
 vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
 vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
