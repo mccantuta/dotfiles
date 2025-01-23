@@ -1,7 +1,8 @@
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
-require('telescope').setup {
+require('telescope').setup ({
   defaults = {
+    layout_strategy = "vertical",
     mappings = {
       i = {
         ['<C-u>'] = false,
@@ -11,7 +12,7 @@ require('telescope').setup {
       },
     },
   },
-}
+})
 
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
