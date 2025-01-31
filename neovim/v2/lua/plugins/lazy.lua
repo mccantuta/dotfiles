@@ -214,4 +214,8 @@ require('lazy').setup({
   'mhartington/oceanic-next',
   'marko-cerovac/material.nvim',
   {'nyoom-engineering/oxocarbon.nvim'},
+  'slugbyte/lackluster.nvim',
+  'vague2k/vague.nvim',
+  'thesimonho/kanagawa-paper.nvim',
+  'oahlen/iceberg.nvim',
 })
