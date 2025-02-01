@@ -4,3 +4,5 @@ theme = iceberg-dark
 font-family = "JetBrainsMono Nerd Font Mono"
 font-size = 20
 macos-titlebar-style = hidden
+window-height = 20
+window-width = 100
