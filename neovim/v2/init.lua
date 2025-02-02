@@ -16,6 +16,6 @@ require('plugins.lsp')
 require('plugins.trouble')
 
 -- Set colorscheme
-require("themes.kanagawa-paper")
+require("themes.vague")
 
 --vim: ts=4 sts=2 sw=2 et
