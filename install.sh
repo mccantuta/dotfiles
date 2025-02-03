@@ -9,12 +9,23 @@ echo -------------------
 
 echo Installing terminal dependencies
 echo -----------------
+brew install wget
 brew install imagemagick
-brew install node
+brew install node # install npm
 brew install luarocks
 brew install cmake
 brew install rg
+brew install fd
 brew install fzf 
+npm install -g neovim
+python3 -m ensurepip --upgrade
+brew install pipx
+pipx install pip
+pipx install pylatexenc
+
+echo Installing Golang dependencies for NVIM
+echo ----------------- Run in NeoVim to install all dependencies
+:GoInstallBinaries
 
 echo Installing JetBrains Mono Font
 echo ---------------------
