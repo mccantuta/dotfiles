@@ -18,7 +18,6 @@ brew install rg
 brew install fd
 brew install fzf 
 npm install -g neovim
-python3 -m ensurepip --upgrade
 brew install pipx
 pipx install pip
 pipx install pylatexenc
