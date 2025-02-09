@@ -1,8 +1,3 @@
-require('kanagawa').setup({
-colors = {                   -- add/modify theme and palette colors
-        palette = {},
-        theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
-    },
-    theme = "wave",
-})
-vim.cmd("colorscheme kanagawa")
+require('kanagawa').setup()
+-- Available themes: kanagawa-wave, kanagawa-dragon, kanagawa-lotus
+vim.cmd("colorscheme kanagawa-dragon")
