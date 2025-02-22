@@ -76,3 +76,7 @@ echo Copying Ghostty configuration
 echo ----------------------------
 mkdir ~/.config/ghostty
 cp -r ghostty/* ~/.config/ghostty/
+
+echo Install Yazi File Manager
+echo ----------------------------
+brew install yazi
