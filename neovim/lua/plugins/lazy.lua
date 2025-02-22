@@ -132,6 +132,7 @@ require('lazy').setup({ -- IF NOT WORKS - RUN :Lazy build markdown-preview.nvim
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   "rebelot/kanagawa.nvim",
   'shaunsingh/nord.nvim',
+  'morhetz/gruvbox',
   'sainnhe/gruvbox-material',
   { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
   'oxfist/night-owl.nvim',
