@@ -1,6 +1,7 @@
+#background = black
 #theme = tokyonight
-#theme = GruvboxDarkHard
-theme = iceberg-dark
+theme = GruvboxDarkHard
+#theme = iceberg-dark
 font-family = "JetBrainsMono Nerd Font Mono"
 font-size = 20
 macos-titlebar-style = hidden

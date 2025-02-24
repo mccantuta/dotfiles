@@ -152,4 +152,5 @@ require('lazy').setup({ -- IF NOT WORKS - RUN :Lazy build markdown-preview.nvim
   'vague2k/vague.nvim',
   'thesimonho/kanagawa-paper.nvim',
   'oahlen/iceberg.nvim',
+  'metalelf0/base16-black-metal-scheme',
 })
