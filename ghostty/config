@@ -1,8 +1,8 @@
 #background = black
-background-opacity = 1
+#background-opacity = 1
 #theme = tokyonight
-#theme = GruvboxDarkHard
-theme = Everforest Dark - Hard
+theme = GruvboxDarkHard
+#theme = Everforest Dark - Hard
 #theme = iceberg-dark
 font-family = "JetBrainsMono Nerd Font Mono"
 font-size = 20
