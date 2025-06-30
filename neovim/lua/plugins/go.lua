@@ -52,7 +52,7 @@ require('go').setup({
   },
   lsp_document_formatting = true,
   lsp_inlay_hints = {
-    enable = true,
+    enable = false,
   },
   dap_debug = false,
 })
