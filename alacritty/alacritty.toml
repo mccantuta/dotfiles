@@ -1,3 +1,11 @@
+[general]
+# README
+# Copy configuration file to ~/.config/alacritty/
+
+# Install themes
+# mkdir -p ~/.config/alacritty/themes
+# git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+
 [terminal.shell]
 program = "/usr/local/bin/fish"
 
@@ -26,14 +34,6 @@ normal.family = "JetBrainsMono Nerd Font Mono"
 #normal.family = "FiraMono Nerd Font Mono"
 
 size = 18
-
-[general]
-# README
-# Copy configuration file to ~/.config/alacritty/
-
-# Install themes
-# mkdir -p ~/.config/alacritty/themes
-# git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
 
 import = [
     #"~/.config/alacritty/themes/themes/ashes_dark.toml"
