@@ -58,7 +58,7 @@ require('mason').setup()
 
 -- Enable the following language servers
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-local servers = { 'ts_ls', 'gopls', 'angularls', 'html', 'lua_ls', 'jdtls', 'jsonls', 'bashls', 'cssls', 'css_variables', 'dockerls', 'docker_compose_language_service' }
+local servers = { 'ts_ls', 'angularls', 'html', 'lua_ls', 'jdtls', 'jsonls', 'bashls', 'cssls', 'css_variables', 'dockerls', 'docker_compose_language_service' }
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {

@@ -7,26 +7,53 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
   group = format_sync_grp,
 })
+-- Go
+local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.go",
+  callback = function()
+   require('go.format').goimport()
+  end,
+  group = format_sync_grp,
+})
+
+local on_attach = function(_, bufnr)
+  local nmap = function(keys, func, desc)
+    if desc then
+      desc = 'LSP: ' .. desc
+    end
+
+    vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
+  end
+
+  nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+  nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
+  nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
+  nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+  nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
+  nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
+  nmap('<leader>ds', function() require('telescope.builtin').lsp_document_symbols({symbol_width=60}) end, '[D]ocument [S]ymbols')
+  nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+  nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
+  nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+  nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+end
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
 require('go').setup({
-  goimports ='gopls', -- goimports command, can be gopls[default] or either goimports or golines if need to split long lines
-  gofmt = 'gopls', -- gofmt through gopls: alternative is gofumpt, goimports, golines, gofmt, etc
-  lsp_semantic_highlights = true, -- use highlights from gopls
-  null_ls = {           -- set to false to disable null-ls setup
-    golangci_lint = {
-      method = {"NULL_LS_DIAGNOSTICS_ON_SAVE", "NULL_LS_DIAGNOSTICS_ON_OPEN"}, -- when it should run
-      -- disable = {'errcheck', 'staticcheck'}, -- linters to disable empty by default
-      enable = {'govet', 'ineffassign','revive', 'gosimple'}, -- linters to enable; empty by default
-      severity = vim.diagnostic.severity.INFO, -- severity level of the diagnostics
-    },
+  goimports ='gopls',
+  gofmt = 'gopls',
+  lsp_semantic_highlights = true,
+  lsp_cfg = {
+    on_attach = on_attach,
+    capabilities = capabilities,
   },
-  lsp_document_formatting = true, -- set to true: use gopls to format -- false if you want to use other formatter tool(e.g. efm, nulls)
+  lsp_document_formatting = true,
   lsp_inlay_hints = {
-    enable = true, -- this is the only field apply to neovim > 0.10
+    enable = true,
   },
-  trouble = false, -- true: use trouble to open quickfix
-  dap_debug = true, -- set to true to enable dap
-  dap_debug_keymap = true, -- set keymaps for debugger
-  dap_debug_gui = true, -- set to true to enable dap gui, highly recommand
-  dap_debug_vt = true, -- set to true to enable dap virtual text
+  dap_debug = false,
 })
 
