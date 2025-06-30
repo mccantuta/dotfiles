@@ -1,4 +1,3 @@
-[general]
 # README
 # Copy configuration file to ~/.config/alacritty/
 
@@ -7,7 +6,8 @@
 # git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
 
 [terminal.shell]
-program = "/usr/local/bin/fish"
+program = "/opt/homebrew/bin/fish"
+# program = "/usr/local/bin/fish" -- para Mac Intel
 
 [env]
 TERM = "xterm-256color"
@@ -33,8 +33,9 @@ normal.family = "JetBrainsMono Nerd Font Mono"
 #normal.family = "JuliaMono"
 #normal.family = "FiraMono Nerd Font Mono"
 
-size = 18
+size = 19
 
+[general]
 import = [
     #"~/.config/alacritty/themes/themes/ashes_dark.toml"
     #"~/.config/alacritty/themes/themes/aura.toml"
