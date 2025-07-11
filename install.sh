@@ -30,10 +30,20 @@ echo Installing JetBrains Mono Font
 echo ---------------------
 brew install font-jetbrains-mono-nerd-font
 
+echo Installing Fira Code Mono Font
+echo ---------------------
+brew install font-fira-code-nerd-font
+
+echo Installing Hack Nerd Font
+echo ---------------------
+brew install font-hack-nerd-font
+
+echo Installing Source Code Pro Font (Patch de Nerf Font)
+echo ---------------------
+brew install font-sauce-code-pro-nerd-font
+
 echo Installing Inconsolata Font
 echo ---------------------
-brew tap homebrew/cask-fonts
-brew install font-inconsolata
 brew install font-inconsolata-nerd-font
 
 echo Installing Monaspice Font

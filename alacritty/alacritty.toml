@@ -25,16 +25,20 @@ option_as_alt = "Both"
 
 [font]
 #normal.family = "MesloLGS Nerd Font Mono"
-normal.family = "JetBrainsMono Nerd Font Mono"
-normal.style = "Thin"
+#normal.family = "JetBrainsMono Nerd Font Mono"
+#normal.family = "FiraCode Nerd Font Mono"
+#normal.family = "Hack Nerd font Mono"
+#normal.family = "SauceCodePro Nerd Font Mono"
+normal.family = "Inconsolata Nerd Font Mono"
+#normal.style = "Thin"
+normal.style = "Regular"
 #normal.family = "MonaspiceNe Nerd Font Mono"
-#normal.family = "Inconsolata Nerd Font Mono"
 #normal.family = "Hack Nerd Font Mono"
 #normal.family = "Maple Mono"
 #normal.family = "JuliaMono"
 #normal.family = "FiraMono Nerd Font Mono"
 
-size = 19
+size = 20
 
 [general]
 import = [
