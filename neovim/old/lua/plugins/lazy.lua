@@ -55,22 +55,38 @@ require('lazy').setup({ -- IF NOT WORKS - RUN :Lazy build markdown-preview.nvim
   'leoluz/nvim-dap-go',
 
   {
-    -- Main LSP Configuration
+    'ray-x/go.nvim',
+    dependencies = {
+      'mfussenegger/nvim-dap', -- Debug Adapter Protocol
+      'rcarriga/nvim-dap-ui',
+      'nvim-neotest/nvim-nio',
+      'theHamsta/nvim-dap-virtual-text',
+      'ray-x/guihua.lua',
+    }
+  },
+  {
+    "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
+  },
+
+  { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
-      -- Automatically install LSPs and related tools to stdpath for Neovim
-      -- Mason must be loaded before its dependents so we need to set it up here.
-      -- NOTE: `opts = {}` is the same as calling `require('mason').setup({})`
-      { 'mason-org/mason.nvim', opts = {} },
-      'mason-org/mason-lspconfig.nvim',
-      'WhoIsSethDaniel/mason-tool-installer.nvim',
+      -- Automatically install LSPs to stdpath for neovim
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
 
-      -- Useful status updates for LSP.
-      { 'j-hui/fidget.nvim', opts = {} },
+      -- Useful status updates for LSP
+      'j-hui/fidget.nvim',
+    }
+  },
 
-      -- Allows extra capabilities provided by blink.cmp
-      'saghen/blink.cmp',
-    },
+  {
+	"L3MON4D3/LuaSnip",
+	-- follow latest release.
+	version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+	-- install jsregexp (optional!).
+	build = "make install_jsregexp"
   },
 
   { -- Autocompletion
@@ -87,18 +103,19 @@ require('lazy').setup({ -- IF NOT WORKS - RUN :Lazy build markdown-preview.nvim
       'nvim-treesitter/nvim-treesitter-textobjects',
     }
   },
-
+  
   -- Git related plugins
   'tpope/vim-fugitive',
+  'lewis6991/gitsigns.nvim',
 
   {
     'nvim-lualine/lualine.nvim', -- Fancier statusline
     dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
 
-   { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }, -- Add indentation guides even on blank lines
-
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }, -- Add indentation guides even on blank lines
   'numToStr/Comment.nvim',
+  --'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
   -- Fuzzy Finder (files, lsp, etc)
   { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
