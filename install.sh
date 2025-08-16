@@ -44,7 +44,7 @@ brew install font-hack-nerd-font
 
 echo Installing Cascadia Mono Nerd Font
 echo ---------------------
-brew install font-cascadia-mono-nf
+brew install font-caskaydia-mono-nerd-font
 
 echo Installing Iosevka Mono Nerd Font
 echo ---------------------
