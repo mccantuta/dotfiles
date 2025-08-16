@@ -30,29 +30,29 @@ echo Installing JetBrains Mono Font
 echo ---------------------
 brew install font-jetbrains-mono-nerd-font
 
-echo Installing Fira Code Mono Font
+echo Installing Intel One Mono Font
 echo ---------------------
-brew install font-fira-code-nerd-font
-
-echo Installing Hack Nerd Font
-echo ---------------------
-brew install font-hack-nerd-font
+brew install font-intone-mono-nerd-font
 
 echo Installing Source Code Pro Font (Patch de Nerf Font)
 echo ---------------------
 brew install font-sauce-code-pro-nerd-font
 
+echo Installing Hack Nerd Font
+echo ---------------------
+brew install font-hack-nerd-font
+
+echo Installing Cascadia Mono Nerd Font
+echo ---------------------
+brew install font-cascadia-mono-nf
+
+echo Installing Iosevka Mono Nerd Font
+echo ---------------------
+brew install font-iosevka-nerd-font
+
 echo Installing Inconsolata Font
 echo ---------------------
 brew install font-inconsolata-nerd-font
-
-echo Installing Monaspice Font
-echo ---------------------
-brew install font-monaspace-nerd-font
-
-echo Installing Meslo LG Font
-echo ---------------------
-brew install font-meslo-lg-nerd-font
 
 echo Installing Fish Shell
 echo ---------------------
