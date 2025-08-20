@@ -91,4 +91,5 @@ echo Install Yazi File Manager
 echo ----------------------------
 brew install yazi
 ya pack -a dangooddd/kanagawa  # Kanagawa theme
-
+ya pack -a bennyyip/gruvbox-dark
+ya pack -a Chromium-3-Oxide/everforest-medium

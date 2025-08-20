@@ -1,4 +1,5 @@
 # colocar en ~/.config/yazi 
 [flavor]
-dark = "kanagawa"
-
+#dark = "kanagawa"
+#dark = "gruvbox-dark"
+dark = "everforest-medium"
