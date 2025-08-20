@@ -90,3 +90,5 @@ cp -r ghostty/* ~/.config/ghostty/
 echo Install Yazi File Manager
 echo ----------------------------
 brew install yazi
+ya pack -a dangooddd/kanagawa  # Kanagawa theme
+
