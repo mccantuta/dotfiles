@@ -26,6 +26,10 @@ echo Installing Golang dependencies for NVIM
 echo ----------------- Run in NeoVim to install all dependencies
 :GoInstallBinaries
 
+echo Installing Blex Mono Font
+echo ---------------------
+brew install font-blex-mono-nerd-font
+
 echo Installing JetBrains Mono Font
 echo ---------------------
 brew install font-jetbrains-mono-nerd-font
