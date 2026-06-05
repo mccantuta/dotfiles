@@ -33,7 +33,10 @@ require('lazy').setup({
     end,
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
-    }
+    },
+    config = function()
+      require('plugins.treesitter')
+    end,
   },
 
   -- Git related plugins
@@ -41,15 +44,34 @@ require('lazy').setup({
 
   {
     'nvim-lualine/lualine.nvim', -- Fancier statusline
-    dependencies = { 'nvim-tree/nvim-web-devicons' }
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require('plugins.lualine')
+    end,
   },
 
-   { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }, -- Add indentation guides even on blank lines
+  { "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    config = function()
+      require('plugins.blankline')
+    end,
+  },
 
-  'numToStr/Comment.nvim',
+  {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('plugins.comment')
+    end,
+  },
 
-  -- Fuzzy Finder (files, lsp, etc)
-  { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
+  -- Fuzzy Finder
+  { 'nvim-telescope/telescope.nvim',
+    branch = '0.1.x',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require('plugins.telescope')
+    end,
+  },
   'nvim-telescope/telescope-symbols.nvim',
 
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available

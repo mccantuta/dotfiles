@@ -3,12 +3,8 @@ vim.o.termguicolors = true
 require('keymaps')
 require('plugins.lazy')
 require('plugins.nvimtree')
-require('plugins.lualine')
 require('options')
 require('misc')
-require('plugins.comment')
-require('plugins.telescope')
-require('plugins.treesitter')
 -- Set colorscheme
 --require("themes.vague")
 require("themes.nordic") -- nordic, everforest,gruvbox-material
