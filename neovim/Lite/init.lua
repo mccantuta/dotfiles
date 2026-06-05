@@ -1,9 +1,9 @@
 vim.o.termguicolors = true
 
+require('options')
 require('keymaps')
 require('plugins.lazy')
 require('plugins.nvimtree')
-require('options')
 require('misc')
 -- Set colorscheme
 --require("themes.vague")
