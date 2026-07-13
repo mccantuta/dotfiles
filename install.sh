@@ -58,6 +58,10 @@ echo Installing Inconsolata Font
 echo ---------------------
 brew install font-inconsolata-nerd-font
 
+brew install font-agave-nerd-font
+brew install font-bigblue-terminal-nerd-font
+brew install font-space-mono-nerd-font
+
 echo Installing Fish Shell
 echo ---------------------
 brew install fish
