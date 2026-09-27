@@ -2,11 +2,10 @@
 #background-opacity = 1
 #theme = tokyonight
 #theme = GruvboxDarkHard
-theme = iceberg-dark
+theme = Iceberg Dark
 #theme = Everforest Dark - Hard
-#theme = iceberg-dark
-font-family = "JetBrainsMono Nerd Font Mono"
-font-size = 20
+font-family = "BlexMono Nerd Font"
+font-size = 19
 macos-titlebar-style = hidden
 window-height = 20
 window-width = 100
